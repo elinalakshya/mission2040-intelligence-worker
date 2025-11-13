@@ -1,3 +1,4 @@
+print("=== Worker Started ===")
 import os
 import time
 import requests
