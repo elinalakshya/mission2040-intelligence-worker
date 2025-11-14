@@ -5,3 +5,4 @@ PyPDF2==3.0.1
 sendgrid==6.12.5
 
 requests
+python-dotenv
