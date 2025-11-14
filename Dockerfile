@@ -1,14 +1,16 @@
-# Mission2040 Intelligence Worker - Clean Dockerfile
+RUN python3 --version
+
 FROM python:3.10-slim
+
+RUN python3 --version
 
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt /app/
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy worker code
-COPY . /app/
+COPY . .
 
-# Start the intelligence worker
+WORKDIR /app
+
 CMD ["python", "mission2040_intelligence_worker.py"]
