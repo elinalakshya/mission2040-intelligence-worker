@@ -1,13 +1,14 @@
 FROM python:3.10-slim
 
-# Prevent Render from treating this as a Web Service
-EXPOSE 1
-
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY . /app/
 
-CMD ["python3", "mission2040_intelligence_worker.py"]
+# DO NOT expose any port
+# DO NOT run uvicorn
+# Render will treat this as a worker automatically
+
+CMD ["python", "mission2040_intelligence_worker.py"]
