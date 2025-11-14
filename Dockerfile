@@ -7,8 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/
 
-# DO NOT expose any port
-# DO NOT run uvicorn
-# Render will treat this as a worker automatically
-
+# Do NOT expose port
+# Do NOT use uvicorn
+# This runs as a pure worker
 CMD ["python", "mission2040_intelligence_worker.py"]
