@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: mission2040-intelligence-worker
+    env: docker
+    repo: https://github.com/elinalakshya/mission2040-intelligence-worker
+    branch: main
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: "python3 mission2040_intelligence_worker.py"
+    plan: starter
+    autoDeploy: true
