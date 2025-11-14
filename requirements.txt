@@ -6,3 +6,8 @@ sendgrid==6.12.5
 
 requests
 python-dotenv
+
+fastapi
+uvicorn
+requests
+python-dotenv
